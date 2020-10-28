@@ -1,14 +1,19 @@
 public class Rectangle {
     double x;
     double y;
+    private static  int createdRectangles;
+    private static final String RUSSIAN_CLASS_NAME = "Прямоугольник";
+    private static final String ENGLISH_CLASS_NAME = "Квадрат";
     Rectangle(double lenght, double weight) {
         x = lenght;
         y = weight;
+        createdRectangles++;
     }
 
     Rectangle(double squarelenght) {
         x = squarelenght;
         y = squarelenght;
+        createdRectangles++;
     }
 
     double calculateArea() {
@@ -34,5 +39,14 @@ public class Rectangle {
     }
         System.out.println("Они различны");
            return false;
+    }
+    public static void printRectanglesCount(){
+        System.out.println("Всего было создано " + createdRectangles + " прямоугольников");
+    }
+    public static void printClassname (boolean printRussian){
+        if (printRussian) {
+            System.out.println(RUSSIAN_CLASS_NAME);
+        }
+        System.out.println(ENGLISH_CLASS_NAME);
     }
 }
