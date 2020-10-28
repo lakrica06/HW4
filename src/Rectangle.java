@@ -23,14 +23,16 @@ public class Rectangle {
     void printRectangleKind() {
         if (x == y) {
             System.out.println("Это квадрат");
-        } else System.out.println("Это прямоугольник");
+        }
+        System.out.println("Это прямоугольник");
     }
 
     boolean inTheSameRectangle(Rectangle a) {
     if(this.x == a.x && this.y == a.y) {
         System.out.println("Они равны");
         return true;
-    }else System.out.println("Они различны");
+    }
+        System.out.println("Они различны");
            return false;
     }
 }
