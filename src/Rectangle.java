@@ -4,15 +4,15 @@ public class Rectangle {
     private static  int createdRectangles;
     private static final String RUSSIAN_CLASS_NAME = "Прямоугольник";
     private static final String ENGLISH_CLASS_NAME = "Квадрат";
-    Rectangle(double lenght, double weight) {
-        x = lenght;
-        y = weight;
+    Rectangle(double length, double width) {
+        x = length;
+        y = width;
         createdRectangles++;
     }
 
-    Rectangle(double squarelenght) {
-        x = squarelenght;
-        y = squarelenght;
+    Rectangle(double squareLenght) {
+        x = squareLenght;
+        y = squareLenght;
         createdRectangles++;
     }
 
@@ -28,7 +28,7 @@ public class Rectangle {
     void printRectangleKind() {
         if (x == y) {
             System.out.println("Это квадрат");
-        }
+        } else
         System.out.println("Это прямоугольник");
     }
 
